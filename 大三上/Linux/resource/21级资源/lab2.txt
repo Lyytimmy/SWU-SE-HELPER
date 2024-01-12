@@ -1,0 +1,34 @@
+1、以非root用户登录，创建~/course/linux/ex3目录，并切换到该目录
+2、创建~/course/linux/ex1/t3.c的软链接和硬链接。使用ls -li参看创建的链接文件，比较链接数、i-node等。
+3、分别删除硬链接和软链接，使用ls -li参看创建的链接文件，比较链接数、i-node等。
+4、创建目录~/course/linux/ex1的软链和硬链接。硬链接能否能建立？
+5、练习使用不同的压缩命令压缩文件及解压（练习将ex1目录下的文件以及目录压缩解压）。
+6、将~/course/linux/ex1目录下所有内容打包压缩并复制到当前目录。在当前目录下创建backup目录，将打包的文件释放到该目录
+7、使用find命令查找文件/etc目录下文件名包含字符串pass的文件。
+8、查找/usr/share目录下文件大小超过10M的文件
+9、在当前目录查找最近1小时（天）修改过的文件。（使用touch命令创建相应的文件t1,t2,t12,t13，1.2，2.c,stat查看文件属性） 
+10、在当前目录查找最近3小时（天）没访问过的文件。（使用touch命令创建相应的文件,stat查看文件属性）
+11、在当前目录查找查找最近1小时访问过并且文件名以t开始长度2的文件。
+12、查找大小为零的.c文件并删除。
+13、查找大小为零最近一天没访问过文件并移动到backup目录。
+
+使用touch命令设定特定时间戳，timestamp参数必须采用以下格式：
+
+[[CC]YY]MMDDhhmm[.ss]
+touch -t 201903211210.20 t1.txt
+
+也可以使用-a和-m选项来指定文件的访问时间和修改时间
+使用-a选项更改文件的访问时间为当前时间：
+touch -a file1.txt
+
+使用-m选项更改文件的修改时间为当前时间：
+touch -m file1.txt
+
+使用特定时间戳
+touch -at 202209081200 t3
+
+1. Access time or atime changes when a command reads the file's contents, such as grep or cat. The ls -lu command displays the atime for files.
+
+2. Change time or ctime changes when a file's property changes, such as renaming files, modifying file permission, or moving the file. The ls -lc command shows the ctime for files.
+
+3. Modification time or mtime changes when a file's contents change. The ls -l command shows the mtime for files.

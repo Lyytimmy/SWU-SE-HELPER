@@ -1,0 +1,44 @@
+有入下数据文件data.txt
+48	Dec	3BC1997	LPSX	68.00	LVX2A	138
+483	Sept	5AP1996	DSP	65.00	LVX2C	189
+47	Oct	3ZL1998	LPSX	43.00	KVM9D	512
+
+219	dec	2CC1999	CAD	23.00	PLV2C	68
+484	nov	7PL1996	CAD	49.00	PLV2C	234
+483	may	5PA1998	DSP	37.00	KVM9D	644
+216	sept	3ZL1998	DSP	86.00	KVM9E	234
+216	sept	3ZL1998	DSP	86.00	KVM9E	234
+第1列：城市位置编号。
+第2列：月份。
+第3列：存储代码及出库年份。
+第4列：产品代号。
+第5列：产品统一标价。
+第6列：标识号。
+第7列：合格数量。
+
+1、命令cat * > new_file 是什么功能？paste 1.txt 2.txt>3.txt是什么功能?
+2、将data.txt排序并保存到data.sorted文件。使用输入和输出重定向实现
+3、在data.txt文件中查找含有“5AP”的行，并将结果保存到文件fre,将错误信息保存到文件error.log
+4、请解释下面两条命令的功能
+     cat 0<memo | sort 1>letter 2>/dev/null
+     cat 1>letter 0<memo 2>&1
+5、以长格式列出当前目录下的普通文件
+6、统计当前目录下目录文件的数目
+7、显示最近登录到系统中的用户的名字
+who命令输出如下：
+root     tty1         Oct 13 12:05
+michael  tty5         Oct 13 12:58
+cam      tty23        Oct 13 11:51
+kilrath  tty25        Oct 13 11:58
+8、将data.txt文件按合格数量排序，并输出合格数量最高的三个月的月份和数量并保存到文件1.txt
+9、删除data.txt文件中的空行和重复的行，并输出月份和合格数量到文件2.txt
+10、请解释环境变量PATH的作用，如何将新路径添加到PATH？
+账户管理
+1、创建名为sales和marketing的组账户
+3、在系统中添加一个本地用户账户，用户名为test_user1,主组为sales，附加组为marketing；将用户的密码设置为123456。在系统中添加另一个新用户test_user2,并设置密码。
+4、使用test_user1登录系统，使用touch命令创建测试文件t1,t2;使用newgrp命令将用户的当前组转换为marketing，使用touch命令创建测试文件t3,t4
+5、查找 /home目录（及任何子目录）中属主名为test_user1的文件；查找组名为sales的文件。
+6、将用户test_user2的主组设为marketing
+7、将文件t1的属主改为test_user2
+8、（*）如何使用sudo使得用户user1能执行命令useradd？
+
